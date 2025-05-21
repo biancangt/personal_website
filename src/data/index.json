@@ -30,14 +30,14 @@
       "id": "1",
       "src": "./img/portfolio-image-1.png",
       "title": "Kitty House Adoption website",
-      "description": "Kitty House is a web application I developed for managing cat adoption listings. It was built using Flask for the back end and JavaScript for dynamic front-end interactions, with external APIs integrated to enhance functionality. The project focuses on clean design, usability, and practical application of full-stack development skills. It allowed me to deepen my experience working with Python-based web frameworks, RESTful APIs, and client-server communication.",
+      "description": "Kitty House is a full-stack web app for managing and showcasing cat adoption listings. Built with Flask (back end) and JavaScript (front end), it integrates external APIs to deliver real-time pet data and location-based services. The app features a responsive, user-friendly design for both adopters and administrators. This project strengthened my skills in Python web frameworks, RESTful APIs, and client-server communication, while reinforcing a user-centered development approach.",
       "link": "https://github.com/biancangt/kitty_house"
     },
     {
       "id": "2",
       "src": "./img/portfolio-image-2.png",
       "title": "Personal Website",
-      "description": "This is my Personal Website. It is a React-based web application I built to showcase my journey as a developer, highlight my projects, and share my story. Using React, JavaScript, and CSS, I created a clean, responsive, and user-friendly interface that presents my skills, experiences, and passions clearly. The site serves as a central hub to connect with others and document my ongoing growth in software development.",
+      "description": "This is my Personal Website — a React-based web application I created to showcase my journey as a developer and highlight the projects I’ve worked on. Built using React, JavaScript, and CSS, the site features a clean, responsive design with smooth navigation and a user-friendly layout. It presents my skills, experiences, and passions in a structured and accessible way, while also serving as a central hub for networking and professional outreach. This project allowed me to strengthen my front-end development skills and work with modern component-based architecture",
       "link": "https://github.com/biancangt/personal_website"
     },
     {
