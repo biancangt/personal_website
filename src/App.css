@@ -869,10 +869,94 @@ h3 {
   color: #CCCCCC;
 }
 
+/* Portfolio Section colors */
+.portfolio--section {
+  background-color: #121212;
+  color: #B0B0B0;
+}
+
+.portfolio--section--card {
+  background: #1E1E2F;
+  color: #B0B0B0;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.portfolio--section--card:hover {
+  border-bottom: 4px solid #7c61ff;
+  color: #E0E0E0;
+}
+
+.portfolio--section--img {
+  background: #2A2A3D;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+}
+
+.portfolio--section--title {
+  color: #E0E0E0;
+}
+
+.portfolio--link {
+  border-bottom: 1.33px solid #7c61ff;
+  color: #B0B0B0;
+}
+
+.portfolio--link:hover {
+  color: #E0E0E0;
+}
+
+.portfolio--section--card:hover path {
+  stroke: #7c61ff;
+}
+
+
+/* Certification Section colors */
+.certification--section {
+  background-color: #121212;
+  color: #B0B0B0;
+}
+
+.certification--section--card {
+  background: #1E1E2F;
+  color: #B0B0B0;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.certification--section--card:hover {
+  border-bottom: 4px solid #7c61ff;
+  color: #E0E0E0;
+}
+
+.certification--section--img {
+  background: #2A2A3D;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+}
+
+.certification--section--title {
+  color: #E0E0E0;
+}
+
+.certification--section--school {
+  color: #CCCCCC;
+}
+
+.certification--link {
+  border-bottom: 1.33px solid #7c61ff;
+  color: #B0B0B0;
+}
+
+.certification--link:hover {
+  color: #E0E0E0;
+}
+
+.certification--section--card:hover path {
+  stroke: #7c61ff;
+}
+
+
 /* Footer */
 .footer--container {
   padding: 107px 85px;
-  background-color: #1E1E2F;
+  background-color: #1E1E1E;
   color: #B0B0B0;
   display: flex;
   flex-direction: column;

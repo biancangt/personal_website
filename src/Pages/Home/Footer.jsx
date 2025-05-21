@@ -4,7 +4,7 @@ function Footer() {
   return (
     <footer className="footer--container">
       <div className="footer--content--container">
-        <p className="footer--content">Made by Bianca Nagata</p>
+        <p className="footer--content"></p>
       </div>
     </footer>
   );
