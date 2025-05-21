@@ -238,6 +238,7 @@ h2 {
 /* Hero Section Style Ends */
 
 /* Skills Section Style */
+
 .skills--section {
   display: flex;
   padding: 149.33px 85.33px;
@@ -259,6 +260,7 @@ h2 {
   gap: 42.6px;
   grid-template-columns: repeat(4, 1fr);
 }
+
 .skills--section--card {
   display: flex;
   padding: 32px;
@@ -306,6 +308,21 @@ h2 {
   font-weight: 400;
   line-height: 32px;
 }
+
+/* Mobile view: stack skill cards vertically with full width */
+@media only screen and (max-width: 600px) {
+  .skills--section--container {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+  }
+
+  .skills--section--card {
+    flex: 1 1 100% !important;
+    width: 100% !important;
+  }
+}
+
 
 /* Skills Style Ends */
 
@@ -526,7 +543,7 @@ input[type="checkbox"] {
 /* Contact End */
 
 /* Footer Start */
-/* Footer Starts */
+
 .footer--container {
   display: flex;
   flex-direction: column;
@@ -557,6 +574,7 @@ input[type="checkbox"] {
   line-height: 28px;
   text-align: center;
 }
+/* Footer end*/
 
 /* Responsive Screens */
 @media only screen and (max-width: 1800px) {
@@ -564,51 +582,25 @@ input[type="checkbox"] {
     font-size: 68px;
     line-height: 70px;
   }
-  .skills--section--title {
-    font-size: 28px;
-    line-height: 40px;
-  }
-}
-
-@media only screen and (max-width: 1600px) {
-  .skills--section--heading {
-    font-size: 54px;
-    line-height: 70px;
-  }
-  .skills--section--container {
-    gap: 16px;
-  }
-  .skills--section--card {
-    gap: 28px;
-  }
-  .skills--section--card--content {
-    gap: 20px;
-  }
-  .skills--section--title {
-    font-size: 23px;
-    line-height: 30px;
-  }
-  .skills--section--description {
-    font-size: 17.333px;
-    line-height: 27px;
-  }
 }
 
 @media only screen and (max-width: 1200px) {
   .btn-outline-primary {
     display: none;
   }
+
   .hero--section {
     display: flex;
     flex-direction: column-reverse;
     padding-bottom: 70px;
   }
+
   .hero--section--title,
   .hero--section-description,
   .footer--content {
-    text-align: center;
+    text-align: left;
   }
-  .skills--section--container,
+
   .about--section,
   .portfolio--section--container,
   .portfolio--container-box,
@@ -618,16 +610,17 @@ input[type="checkbox"] {
     display: flex;
     flex-direction: column;
   }
-  .skills--section,
+
   .portfolio--container,
   .hero--section--content,
   .hero--section--content--box {
-    align-items: center;
+    align-items: left;
   }
+
   .portfolio--container-box {
     gap: 30px;
   }
-  .skills--section,
+
   .certification--section,
   .contact--section,
   .footer--container {
@@ -635,40 +628,63 @@ input[type="checkbox"] {
     padding-top: 70px;
     padding-bottom: 70px;
   }
+
   .about--section {
     gap: 20px;
     padding-top: 0;
     padding-bottom: 0;
   }
-  .certification--section--card {
-    padding: 25px;
+
+  .certification--section--container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
   }
+
+  .certification--section--card {
+    flex: 1 1 100%;
+    box-sizing: border-box;
+  }
+
   .hero--section--title,
-  .skills--section--heading,
   .sections--heading {
     font-size: 35px;
     line-height: 40px;
   }
+
   .hero--section--content--box {
     gap: 10px;
   }
+
   .contact--form--container {
     width: 100%;
   }
+
   .container {
     display: flex;
     flex-direction: column;
     gap: 10px;
   }
+
   .footer--social--icon > ul,
   .footer--items > ul {
     padding: 0;
     align-items: center;
   }
+
   .divider {
     margin: 20px;
   }
 }
+
+@media only screen and (max-width: 1600px) {
+  
+}
+
+/* End of responsive screens */
+
+
+
 
 /* Hamburger menu  */
 
@@ -949,7 +965,7 @@ h3 {
   background-color: #121212;
 }
 .skills--section--heading {
-  font-size: 64px;
+  font-size: 48px;
   font-weight: 700;
   line-height: 77px;
   color: #E0E0E0;
