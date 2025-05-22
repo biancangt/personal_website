@@ -804,25 +804,14 @@ img {
   }
 }
 
-/* Hide about-me image on mobile only */
+/* Hide images on mobile */
 @media (max-width: 768px) {
-  .about--section--img {
-    display: none;
-  }
-}
-@media (max-width: 768px) {
-  .certification--section--img {
-    display: none;
-  }
-}
-
-@media (max-width: 768px) {
+  .about--section--img,
+  .certification--section--img,
   .hero--section--img {
     display: none;
   }
 }
-
-
 
 @media (max-width: 768px) {
   /* Skills */
@@ -887,6 +876,7 @@ img {
     width: 60px !important;
     height: 60px !important;
   }
+
   .portfolio--container-box > div .portfolio--section--title {
     flex-direction: initial !important;
     display: block !important;
@@ -895,6 +885,104 @@ img {
     align-self: auto !important;
   }
 }
+
+/* Enhanced for Cellphones (max-width: 480px) */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+
+  .hero--section {
+    display: flex !important;
+    flex-direction: column-reverse !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 20px 10px !important;
+  }
+
+  .hero--section--content,
+  .hero--section--content--box,
+  .hero--section--title,
+  .hero--section-description {
+    text-align: left !important;
+    align-items: flex-start !important;
+  }
+
+  .hero--section--title,
+  .skills--section--heading,
+  .sections--heading {
+    font-size: 28px !important;
+    line-height: 34px !important;
+    text-align: left !important;
+  }
+
+  .hero--section-description,
+  .skills--section--description {
+    font-size: 15px !important;
+    line-height: 24px !important;
+    text-align: left !important;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: auto;
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  .skills--section,
+  .portfolio--section,
+  .about--section,
+  .certification--section,
+  .contact--section {
+    padding: 20px 10px !important;
+  }
+
+  .portfolio--container-box > div {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+  }
+
+  .footer--items ul,
+  .footer--social--icon ul {
+    gap: 10px;
+    font-size: 14px;
+  }
+
+  .footer--content {
+    font-size: 13px;
+    text-align: center;
+  }
+
+  .nav__hamburger {
+    top: 15px;
+    right: 15px;
+  }
+
+  .navbar--items ul {
+    padding: 2rem 0 0.5rem;
+  }
+
+  .container {
+    gap: 8px;
+  }
+
+  .divider {
+    margin: 10px;
+  }
+}
+
+/* Hide images on mobile */
+@media (max-width: 480px) {
+  .about--section--img,
+  .certification--section--img,
+  .hero--section--img {
+    display: none;
+  }
+}
+
 
 
 /* End of Responsible */
