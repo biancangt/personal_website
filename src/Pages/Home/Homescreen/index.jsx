@@ -4,6 +4,7 @@ import HeroSection from "../HeroSection";
 import MyPortfolio from "../MyPortfolio";
 import MySkills from "../MySkills";
 import Certification from "../Certifications";
+import ContactMe from "../ContactMe";
 
 export default function Home() {
   return (
@@ -11,8 +12,9 @@ export default function Home() {
       <HeroSection />
       <MySkills />
       <AboutMe />
-      <MyPortfolio />
       <Certification/>
+      <MyPortfolio />
+      <ContactMe />
       <Footer />
     </>
   );

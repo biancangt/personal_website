@@ -33,7 +33,7 @@ function ReadMore({ text }) {
             cursor: "pointer",
             padding: 0,
             fontSize: "inherit",
-            textDecoration: "underline",
+            
           }}
           aria-expanded={isExpanded}
         >
@@ -51,7 +51,7 @@ function ReadMore({ text }) {
             cursor: "pointer",
             padding: 0,
             fontSize: "inherit",
-            textDecoration: "underline",
+            
           }}
           aria-expanded={isExpanded}
         >

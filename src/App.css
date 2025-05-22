@@ -200,6 +200,7 @@ h2 {
   gap: 32px;
   background-color: var(--bg-shade);
 }
+
 .hero--section--content-box {
   display: flex;
   flex-direction: column;
@@ -238,94 +239,78 @@ h2 {
   width: 100%;
   height: 100%;
 }
+.hero--img-mobile {
+  display: none;
+}
 /* Hero Section Style Ends */
 
-/*Skills Section Starts*/
+/* Skills Section Starts */
 
 .skills--section {
-  display: flex;
-  padding: 149.33px 85.33px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 106.667px;
-}
-
-.skills--section--heading {
-  color: var(--heading-color);
-  font-size: 64px;
-  font-weight: 700;
-  line-height: 77px;
-}
-
-.skills--section--container {
-  display: grid;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 42.6px;
-  grid-template-columns: repeat(4, 1fr);
-}
-
-.skills--section--card {
-  display: flex;
-  padding: 32px;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 32px;
-  flex: 1 0 0;
-  border-radius: 10.6px;
-  background: var(--bg-shade);
-  min-height: 250px;
-  height: 100%;
+  padding: 20px 10px;
+  max-width: 100%;
+  margin: 0 auto;
+  color: #eee;
   box-sizing: border-box;
 }
 
-.skills--section--card:hover {
-  border-bottom: 4px solid var(--primary);
+.skills--section--content {
+  text-align: center;
 }
 
-.skills--section--img {
-  width: 60px;
-  height: 60px;
-  min-width: 60px;
-  min-height: 60px;
-  padding: 13.3px;
+.skills-section--heading {
+  margin-bottom: 4px;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.skills--section-description {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-style: italic;
+  color: #ccc;
+  text-align: center;
+}
+
+.skills--icons--grid {
   display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 0px 5%;
   justify-content: center;
-  align-items: center;
-  border-radius: 10.6px;
-  background: #fff;
-  box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
 }
 
-.skills--section--img img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.skills--section--card--content {
+.skills--icon--card {
+  flex: 1 0 80px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 32px;
-  align-self: stretch;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-align: center;
+  cursor: default;
+  transition: transform 0.3s ease;
+  color: inherit;
 }
 
-.skills--section--title {
-  color: var(--heading-color);
-  font-size: 32px;
-  font-weight: 700;
-  line-height: 45px;
+.skills--icon--card:hover {
+  transform: scale(1.2);
 }
 
-.skills--section--description {
-  color: var(--black);
-  font-size: 21.3px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 32px;
+.skills--icon--card svg {
+  width: 48px;
+  height: 48px;
 }
+
+.skills--icon--label {
+  margin-top: 8px;
+  font-size: 14px;
+  text-align: center;
+  color: #ccc;
+}
+
+
 /* end of skills section */
 
 /* About Us */
@@ -333,13 +318,19 @@ h2 {
   display: grid;
   padding: 133.3px 85.3px;
   align-items: center;
-  gap: 114.6px;
+  gap: 50.6px;
   grid-template-columns: repeat(2, 1fr);
 }
 .about--section--img > img {
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 80%;
+  padding-left: 50px;
 }
+
+.about--section--box {
+  padding-right: 40px;
+}
+
 /* About Us Ends */
 
 /* My Portfolio Starts */
@@ -519,7 +510,7 @@ h2 {
   margin: 106px 0 42.67px;
   height: 1.333px;
   width: 100%;
-  background: rgba(40, 41, 56, 0.55);
+  background: rgba(70, 72, 99, 0.55);
 }
 
 .footer--content--container {
@@ -529,13 +520,7 @@ h2 {
   width: 100%;
 }
 
-.footer--content {
-  color: var(--black);
-  font-size: 18.667px;
-  font-weight: 400;
-  line-height: 28px;
-  text-align: center;
-}
+
 /* Footer end*/
 
 /* Responsive Starts */
@@ -647,7 +632,7 @@ img {
   .skills--section--card,
   .skills--section--card--content,
   .certification--section,
-  .certification--section--container,       
+  .certification--section--container,
   .certification--section--card,
   .about--section,
   .certification--section--school,
@@ -660,9 +645,10 @@ img {
     flex-direction: column !important;
     align-items: center !important;
     width: 100% !important;
-    text-align: left !important; 
+    text-align: left !important;
   }
-
+ 
+  
   .skills--section,
   .portfolio--container,
   .hero--section--content,
@@ -674,7 +660,7 @@ img {
     gap: 30px;
   }
 
-  .skills--section,
+  .skills--section 
   .certification--section,
   .contact--section,
   .footer--container {
@@ -722,7 +708,7 @@ img {
     align-items: center;
     display: flex;
     flex-direction: column;
-    text-align: left; 
+    text-align: left;
   }
 
   .divider {
@@ -762,7 +748,7 @@ img {
     position: absolute;
     align-items: center;
     justify-content: center;
-    background-color:#121212;
+    background-color: #121212;
     top: -20rem;
     left: 0;
     width: 100%;
@@ -804,43 +790,46 @@ img {
   }
 }
 
-/* Hide images on mobile */
+/* Mobile adjustments (<=768px) */
 @media (max-width: 768px) {
-  .about--section--img,
-  .certification--section--img,
-  .hero--section--img {
-    display: none;
-  }
-}
-
-@media (max-width: 768px) {
-  /* Skills */
   .skills--section--container {
     grid-template-columns: 1fr !important;
     display: flex !important;
     flex-direction: column;
-    gap: 16px;
+    
   }
 
   .skills--section--card {
     flex-direction: row !important;
     align-items: center !important;
     min-height: auto !important;
-    gap: 16px !important;
+    
   }
 
-  .skills--section--img {
-    flex-shrink: 0;
-    width: 60px !important;
-    height: 60px !important;
-  }
+  /* Ícones bem menores no mobile */
+  
 
-  /* Education (Certification) */
+  .skills--icons--grid > div > div {
+    font-size: 1.0rem !important; /* Reduz o tamanho do ícone */
+    padding: px px !important;
+  }
+  .skills--icons--grid {
+    gap: 6px !important;  /* gap menor entre os itens */
+    
+  }
+  
+  .skills--icons--grid > div {
+    padding: 0px !important;
+    margin: 0 !important;
+  }
+  
+
   .certification--section--container {
     grid-template-columns: 1fr !important;
     display: flex !important;
     flex-direction: column;
     gap: 16px;
+    
   }
 
   .certification--section--card {
@@ -855,8 +844,7 @@ img {
     width: 60px !important;
     height: 60px !important;
   }
-
-  /* Portfolio */
+ 
   .portfolio--container-box {
     grid-template-columns: 1fr !important;
     display: flex !important;
@@ -886,7 +874,7 @@ img {
   }
 }
 
-/* Enhanced for Cellphones (max-width: 480px) */
+/* Cellphones (<=480px) */
 @media (max-width: 480px) {
   body {
     font-size: 14px;
@@ -974,16 +962,50 @@ img {
   }
 }
 
-/* Hide images on mobile */
-@media (max-width: 480px) {
-  .about--section--img,
-  .certification--section--img,
+/* === Image swap logic === */
+@media (max-width: 768px) {
+  .hero--section {
+    display: flex !important;
+    flex-direction: column !important;  /* ensure column layout */
+  }
+
   .hero--section--img {
+    display: block !important;          /* show image container */
+    order: -1 !important;               /* move image container above content */
+    width: 100%;
+    margin-bottom: 20px;                /* space below image */
+  }
+
+  .hero--img-desktop {
+    display: none !important;
+  }
+
+  .hero--img-mobile {
+    display: block !important;
+    width: 100%;
+    height: auto;
+  }
+}
+/* === End image swap === */
+
+/* hiding certification and about me images on mobile */
+@media (max-width: 768px) {
+  
+  .certification--section--img {
     display: none;
   }
 }
-
-
+/* Hiding contact button from navbar on mobiles*/
+@media (max-width: 1200px) {
+  .navbar:not(.active) .contact-link {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .skills--section--content {
+    display: none;
+  }
+}
 
 /* End of Responsible */
 
