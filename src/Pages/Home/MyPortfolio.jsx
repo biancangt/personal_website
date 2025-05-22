@@ -1,4 +1,66 @@
+import React, { useState, useEffect } from "react";
 import data from "../../data/index.json";
+
+function ReadMore({ text }) {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    function handleResize() {
+      setIsMobile(window.innerWidth <= 1200);
+    }
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  if (!isMobile) {
+    // Desktop: mostrar texto completo sem botão
+    return <p className="text-md">{text}</p>;
+  }
+
+  // Mobile: mostrar botão Read More / Read Less
+  return (
+    <div>
+      {!isExpanded && (
+        <button
+          onClick={() => setIsExpanded(true)}
+          style={{
+            background: "none",
+            border: "none",
+            color: "#007bff",
+            cursor: "pointer",
+            padding: 0,
+            fontSize: "inherit",
+            textDecoration: "underline",
+          }}
+          aria-expanded={isExpanded}
+        >
+          Read more
+        </button>
+      )}
+      <p className="text-md" style={{ display: isExpanded ? "block" : "none" }}>
+        {text}{" "}
+        <button
+          onClick={() => setIsExpanded(false)}
+          style={{
+            background: "none",
+            border: "none",
+            color: "#007bff",
+            cursor: "pointer",
+            padding: 0,
+            fontSize: "inherit",
+            textDecoration: "underline",
+          }}
+          aria-expanded={isExpanded}
+        >
+          Read less
+        </button>
+      </p>
+    </div>
+  );
+}
 
 export default function MyPortfolio() {
   return (
@@ -9,7 +71,11 @@ export default function MyPortfolio() {
           <h2 className="section--heading">My Portfolio</h2>
         </div>
         <div>
-          <a href="https://github.com/biancangt" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://github.com/biancangt"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <button className="btn btn-github">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -40,7 +106,7 @@ export default function MyPortfolio() {
             <div className="portfolio--section--card--content">
               <div>
                 <h3 className="portfolio--section--title">{item.title}</h3>
-                <p className="text-md">{item.description}</p>
+                <ReadMore text={item.description} />
               </div>
               <a
                 href={item.link}

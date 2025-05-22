@@ -106,7 +106,7 @@ function Navbar() {
         </ul>
       </div>
       <a
-  href="mailto:bras_gape.0w@icloud.com"
+  href="mailto:biancanagata@icloud.com"
   target="_blank"
   rel="noopener noreferrer"
   onClick={closeMenu}

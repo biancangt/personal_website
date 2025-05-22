@@ -19,7 +19,7 @@ p {
 :root {
   --primary: #5e3bee;
   --heading-color: #282938;
-  --bg-shade: #c6dfe6;
+  --bg-shade: #f5fcff;
   --github: #e62872;
   --darkblue: #1c1e53;
   --black: #000000;
@@ -56,6 +56,8 @@ p {
   color: var(--white);
   background-color: var(--primary);
 }
+
+
 .btn-primary {
   color: var(--white);
   background-color: var(--primary);
@@ -140,7 +142,7 @@ h2 {
   display: flex;
   align-items: flex-start;
 }
-/* Portfolio, Certification & Contact Me */
+/* Portfolio, Certification  */
 .sub--title {
   color: var(--heading-color);
   font-size: 16px;
@@ -207,7 +209,6 @@ h2 {
   flex-direction: column;
   align-items: flex-start;
   gap: 21.333px;
-  margin-bottom: 1rem;
 }
 .hero--section--content--box > button {
   margin-top: 21.333px;
@@ -238,7 +239,6 @@ h2 {
 /* Hero Section Style Ends */
 
 /* Skills Section Style */
-
 .skills--section {
   display: flex;
   padding: 149.33px 85.33px;
@@ -260,7 +260,6 @@ h2 {
   gap: 42.6px;
   grid-template-columns: repeat(4, 1fr);
 }
-
 .skills--section--card {
   display: flex;
   padding: 32px;
@@ -308,22 +307,6 @@ h2 {
   font-weight: 400;
   line-height: 32px;
 }
-
-/* Mobile view: stack skill cards vertically with full width */
-@media only screen and (max-width: 600px) {
-  .skills--section--container {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 20px !important;
-  }
-
-  .skills--section--card {
-    flex: 1 1 100% !important;
-    width: 100% !important;
-  }
-}
-
-
 /* Skills Style Ends */
 
 /* About Us */
@@ -450,7 +433,7 @@ h2 {
 .certification--section--img > img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   display: block;
 }
 
@@ -499,48 +482,8 @@ h2 {
   stroke: #006b6a;
 }
 
-
 /* Certification Ends */
-.contact--section {
-  display: flex;
-  padding: 150px 85px;
-  flex-direction: column;
-  justify-content:left;
-  align-items: left;
-  text-align: left;
-  gap: 64px;
-}
 
-select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  /* Some browsers will not display the caret when using calc, so we put the fallback first */
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewBox="0 0 32 33" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.5303 21.2052C16.2374 21.4981 15.7626 21.4981 15.4697 21.2052L7.82318 13.5587C7.53029 13.2658 7.53029 12.791 7.82318 12.4981L8.17674 12.1445C8.46963 11.8516 8.9445 11.8516 9.2374 12.1445L16 18.9071L22.7626 12.1445C23.0555 11.8516 23.5303 11.8516 23.8232 12.1445L24.1768 12.4981C24.4697 12.791 24.4697 13.2658 24.1768 13.5587L16.5303 21.2052Z" fill="%23033333"/></svg>')
-    white no-repeat 98.5% !important; /* !important used for overriding all other customisations */
-  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewBox="0 0 32 33" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.5303 21.2052C16.2374 21.4981 15.7626 21.4981 15.4697 21.2052L7.82318 13.5587C7.53029 13.2658 7.53029 12.791 7.82318 12.4981L8.17674 12.1445C8.46963 11.8516 8.9445 11.8516 9.2374 12.1445L16 18.9071L22.7626 12.1445C23.0555 11.8516 23.5303 11.8516 23.8232 12.1445L24.1768 12.4981C24.4697 12.791 24.4697 13.2658 24.1768 13.5587L16.5303 21.2052Z" fill="%23033333"/></svg>')
-    white no-repeat calc(100% - 20px); /* Better placement regardless of input width */
-}
-/*For IE*/
-select::-ms-expand {
-  display: none;
-}
-.checkbox--label {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 10.6px;
-  flex: 1 0 0;
-  justify-content: flex-start;
-}
-input[type="checkbox"] {
-  width: 21px;
-  height: 21px;
-  border: 0.15em solid var(--heading-color);
-  border-radius: 0.15em;
-  transform: translatey(-0.075em);
-}
-/* Contact End */
 
 /* Footer Start */
 
@@ -576,11 +519,91 @@ input[type="checkbox"] {
 }
 /* Footer end*/
 
+/* Responsive Starts */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Make all elements use border-box for easier sizing */
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/* Limit container widths to viewport */
+.container,
+.skills--section--container,
+.certification--section--container,
+.certification--container-box,
+.portfolio--container-box,
+.about--section,
+.footer--content--container,
+.footer--link--container,
+.footer--items > ul,
+.footer--social--icon > ul {
+  max-width: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+}
+
+/* Make images responsive */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* Responsive Screens */
 @media only screen and (max-width: 1800px) {
   .hero--section--title {
     font-size: 68px;
     line-height: 70px;
+  }
+
+  .skills--section--title {
+    font-size: 28px;
+    line-height: 40px;
+  }
+}
+
+@media only screen and (max-width: 1600px) {
+  .skills--section--heading {
+    font-size: 54px;
+    line-height: 70px;
+  }
+
+  .skills--section--container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .skills--section--card {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .skills--section--card--content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .skills--section--title {
+    font-size: 23px;
+    line-height: 30px;
+  }
+
+  .skills--section--description {
+    font-size: 17.333px;
+    line-height: 27px;
   }
 }
 
@@ -601,32 +624,44 @@ input[type="checkbox"] {
     text-align: left;
   }
 
+  .skills--section--container,
+  .skills--section--card,
+  .skills--section--card--content,
+  .certification--section,
+  .certification--section--container,       
+  .certification--section--card,
   .about--section,
+  .certification--section--school,
   .portfolio--section--container,
   .portfolio--container-box,
   .footer--link--container,
   .footer--items > ul,
   .footer--content--container {
-    display: flex;
-    flex-direction: column;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+    text-align: left !important; 
   }
 
+  .skills--section,
   .portfolio--container,
   .hero--section--content,
   .hero--section--content--box {
-    align-items: left;
+    align-items: center;
   }
 
   .portfolio--container-box {
     gap: 30px;
   }
 
+  .skills--section,
   .certification--section,
   .contact--section,
   .footer--container {
     gap: 20px;
-    padding-top: 70px;
-    padding-bottom: 70px;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 
   .about--section {
@@ -635,18 +670,12 @@ input[type="checkbox"] {
     padding-bottom: 0;
   }
 
-  .certification--section--container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-  }
-
   .certification--section--card {
-    flex: 1 1 100%;
-    box-sizing: border-box;
+    padding: 25px;
   }
 
   .hero--section--title,
+  .skills--section--heading,
   .sections--heading {
     font-size: 35px;
     line-height: 40px;
@@ -658,6 +687,8 @@ input[type="checkbox"] {
 
   .contact--form--container {
     width: 100%;
+    display: flex;
+    flex-direction: column;
   }
 
   .container {
@@ -670,6 +701,9 @@ input[type="checkbox"] {
   .footer--items > ul {
     padding: 0;
     align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: left; 
   }
 
   .divider {
@@ -677,17 +711,7 @@ input[type="checkbox"] {
   }
 }
 
-@media only screen and (max-width: 1600px) {
-  
-}
-
-/* End of responsive screens */
-
-
-
-
-/* Hamburger menu  */
-
+/* Hamburger Menu */
 .nav__hamburger {
   display: none;
   width: 1.875rem;
@@ -703,7 +727,7 @@ input[type="checkbox"] {
   display: block;
   height: 0.188rem;
   width: 100%;
-  background-color: #e3dbdb;
+  background-color: #edebeb;
   border-radius: 0.625rem;
   transition: all ease-in-out 0.2s;
 }
@@ -713,20 +737,21 @@ input[type="checkbox"] {
     display: flex;
     z-index: 200;
   }
+
   .navbar--items {
     display: flex;
-  }
-  .navbar--items {
     position: absolute;
-    display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #1e1e1e;
+    background-color:#121212;
     top: -20rem;
     left: 0;
     width: 100%;
     transition: all ease-in-out 0.4s;
+    flex-direction: column;
+    z-index: -1000;
   }
+
   .navbar--items ul {
     flex-direction: column;
     align-items: center;
@@ -734,18 +759,19 @@ input[type="checkbox"] {
     padding: 3rem 0 0.6rem;
     z-index: -100;
   }
+
   .navbar--items ul li {
     text-align: center;
   }
+
   .navbar--items ul li a {
     padding: 0.5rem;
   }
-  .navbar--items {
-    z-index: -1000;
-  }
+
   .navbar--items.active {
     top: 30px;
   }
+
   .nav__hamburger.active :nth-child(1) {
     transform: rotate(45deg) translate(0.45rem, 0.1875rem);
   }
@@ -758,13 +784,29 @@ input[type="checkbox"] {
     transform: rotate(-45deg) translate(0.45rem, -0.1875rem);
   }
 }
-.navbar--items ul > li > a {
-  text-decoration: none;
-  color: #E0E0E0;
+
+/* Hide about-me image on mobile only */
+@media (max-width: 768px) {
+  .about--section--img {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .certification--section--img {
+    display: none;
+  }
 }
 
+@media (max-width: 768px) {
+  .hero--section--img {
+    display: none;
+  }
+}
 
-/* Responsive Screens Ends*/
+/* End of Responsible */
+
+
+
 /* Dark Mode Implementation*/
 body {
   margin: 0;
@@ -788,7 +830,7 @@ p {
 }
 
 .btn-outline-primary {
-  color: #7c61ff; 
+  color: #eeecf6; 
   background-color: #121212;
   border: 1px solid #7c61ff;
 }
@@ -1118,5 +1160,4 @@ h3 {
   text-align: center;
   color: #B0B0B0;
 }
-
 
