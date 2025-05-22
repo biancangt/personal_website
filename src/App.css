@@ -1,5 +1,6 @@
 /* Global CSS */
 
+
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
@@ -24,6 +25,7 @@ p {
   --darkblue: #1c1e53;
   --black: #000000;
   --white: #ffffff;
+  
 }
 .btn {
   font-family: "Roboto";
@@ -238,7 +240,8 @@ h2 {
 }
 /* Hero Section Style Ends */
 
-/* Skills Section Style */
+/*Skills Section Starts*/
+
 .skills--section {
   display: flex;
   padding: 149.33px 85.33px;
@@ -247,12 +250,14 @@ h2 {
   align-items: flex-start;
   gap: 106.667px;
 }
+
 .skills--section--heading {
   color: var(--heading-color);
   font-size: 64px;
   font-weight: 700;
   line-height: 77px;
 }
+
 .skills--section--container {
   display: grid;
   justify-content: center;
@@ -260,6 +265,7 @@ h2 {
   gap: 42.6px;
   grid-template-columns: repeat(4, 1fr);
 }
+
 .skills--section--card {
   display: flex;
   padding: 32px;
@@ -270,23 +276,34 @@ h2 {
   border-radius: 10.6px;
   background: var(--bg-shade);
   min-height: 250px;
+  height: 100%;
+  box-sizing: border-box;
 }
+
 .skills--section--card:hover {
   border-bottom: 4px solid var(--primary);
 }
-.skills--section--card:hover .skills--section--description {
-  color: var(--darkblue);
-}
+
 .skills--section--img {
-  display: flex;
+  width: 60px;
+  height: 60px;
+  min-width: 60px;
+  min-height: 60px;
   padding: 13.3px;
+  display: flex;
   justify-content: center;
   align-items: center;
-  gap: 13.3px;
   border-radius: 10.6px;
   background: #fff;
   box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.1);
 }
+
+.skills--section--img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 .skills--section--card--content {
   display: flex;
   flex-direction: column;
@@ -294,12 +311,14 @@ h2 {
   gap: 32px;
   align-self: stretch;
 }
+
 .skills--section--title {
   color: var(--heading-color);
   font-size: 32px;
   font-weight: 700;
   line-height: 45px;
 }
+
 .skills--section--description {
   color: var(--black);
   font-size: 21.3px;
@@ -307,7 +326,7 @@ h2 {
   font-weight: 400;
   line-height: 32px;
 }
-/* Skills Style Ends */
+/* end of skills section */
 
 /* About Us */
 .about--section {
@@ -803,6 +822,81 @@ img {
   }
 }
 
+
+
+@media (max-width: 768px) {
+  /* Skills */
+  .skills--section--container {
+    grid-template-columns: 1fr !important;
+    display: flex !important;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .skills--section--card {
+    flex-direction: row !important;
+    align-items: center !important;
+    min-height: auto !important;
+    gap: 16px !important;
+  }
+
+  .skills--section--img {
+    flex-shrink: 0;
+    width: 60px !important;
+    height: 60px !important;
+  }
+
+  /* Education (Certification) */
+  .certification--section--container {
+    grid-template-columns: 1fr !important;
+    display: flex !important;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .certification--section--card {
+    flex-direction: row !important;
+    align-items: center !important;
+    min-height: auto !important;
+    gap: 16px !important;
+  }
+
+  .certification--section--img {
+    flex-shrink: 0;
+    width: 60px !important;
+    height: 60px !important;
+  }
+
+  /* Portfolio */
+  .portfolio--container-box {
+    grid-template-columns: 1fr !important;
+    display: flex !important;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .portfolio--container-box > div {
+    flex-direction: row !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 16px !important;
+  }
+
+  .portfolio--container-box img {
+    flex-shrink: 0;
+    width: 60px !important;
+    height: 60px !important;
+  }
+  .portfolio--container-box > div .portfolio--section--title {
+    flex-direction: initial !important;
+    display: block !important;
+    width: auto !important;
+    margin: 0 !important;
+    align-self: auto !important;
+  }
+}
+
+
 /* End of Responsible */
 
 
@@ -1029,7 +1123,7 @@ h3 {
   transition: border-bottom 0.3s ease;
 }
 .skills--section--card:hover {
-  border-bottom: 4px solid #7c61ff;
+  
   color: #E0E0E0;
 }
 .skills--section--img {

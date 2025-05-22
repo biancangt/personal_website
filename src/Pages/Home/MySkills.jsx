@@ -35,6 +35,8 @@ function ReadMore({ text }) {
             padding: 0,
             fontSize: "inherit",
             textDecoration: "underline",
+            outline: "none",
+            boxShadow: "none",
           }}
           aria-expanded={isExpanded}
         >
@@ -56,6 +58,8 @@ function ReadMore({ text }) {
             padding: 0,
             fontSize: "inherit",
             textDecoration: "underline",
+            outline: "none",
+            boxShadow: "none",
           }}
           aria-expanded={isExpanded}
         >
