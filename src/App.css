@@ -79,6 +79,7 @@ p {
   align-items: center;
   box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.95);
   gap: 16px;
+  cursor: pointer;
 }
 .btn-github:hover {
   color: var(--github);
@@ -375,7 +376,7 @@ h2 {
   flex: 1 0 0;
   background: #fff;
   box-shadow: 0 0 32px 0 rgba(0, 0, 0, 0.15);
-  cursor: pointer;
+  
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
 }
@@ -456,7 +457,7 @@ h2 {
   flex: 1 0 0;
   background: #fff;
   box-shadow: 0 0 32px 0 rgba(0, 0, 0, 0.15);
-  cursor: pointer;
+  
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
 }
@@ -480,17 +481,7 @@ h2 {
 }
 
 
-.certification--link {
-  text-decoration: none;
-  display: flex;
-  gap: 16px;
-  border-bottom: 1.33px solid var(--primary);
-  padding-bottom: 10.6px;
-  font-weight: 600;
-}
-.certification--section--card:hover path {
-  stroke: #006b6a;
-}
+
 
 /* Certification Ends */
 
@@ -1232,10 +1223,7 @@ h3 {
   gap: 32px;
   transition: border-bottom 0.3s ease;
 }
-.skills--section--card:hover {
-  
-  color: #E0E0E0;
-}
+
 .skills--section--img {
   padding: 13px;
   background: #2A2A3D;
@@ -1310,10 +1298,7 @@ h3 {
   transition: color 0.3s ease, border-bottom 0.3s ease;
 }
 
-.certification--section--card:hover {
-  border-bottom: 4px solid #7c61ff;
-  color: #E0E0E0;
-}
+
 
 .certification--section--img {
   background: #2A2A3D;
@@ -1328,18 +1313,7 @@ h3 {
   color: #CCCCCC;
 }
 
-.certification--link {
-  border-bottom: 1.33px solid #7c61ff;
-  color: #B0B0B0;
-}
 
-.certification--link:hover {
-  color: #E0E0E0;
-}
-
-.certification--section--card:hover path {
-  stroke: #7c61ff;
-}
 
 
 /* Footer */
