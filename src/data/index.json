@@ -46,6 +46,21 @@
       "title": "Car Inventory",
       "description": "Car Inventory is a full-stack web application developed using React for the front end and PostgreSQL for database management. It allows users to add, update, and delete cars from an inventory through an intuitive and responsive interface. This project demonstrates dynamic data handling, state management, and seamless integration between the front end and a relational database, enabling efficient tracking and management of vehicle data.",
       "link": "https://github.com/biancangt/car-inventory-react"
+    },
+    {
+      "id": "4",
+      "src": "./img/portfolio-image-4.png",
+      "title": "Blake's Cleaning Website",
+      "description": "Blake's Cleaning is a website for a cleaning service company, built using React, JSON, JSX, JavaScript, and CSS. It features a clean and modern design, showcasing services offered and contact information for potential customers.",
+      "link": "https://github.com/biancangt/blakes-cleaning"
+    },
+    {
+      "id": "5",
+      "src": "./img/portfolio-image-5.png",
+      "title": "Made Imported Website",
+      "description": "Made Imported is a custom web application for a perfume brand, built using React, JSX, and SCSS. The project features a modern, responsive frontend and a Firebase backend for managing product listings securely. It includes a login system that allows the client to easily update products without technical knowledge.",
+      "link": "https://github.com/biancangt/MadeImported",
+      "live": "https://madeimported.netlify.app/"
     }
   ],
   "certification": [
@@ -63,6 +78,5 @@
       "school": "Anhembi Morumbi University | Expected graduation: Dec 2025",
       "description": "Pursuing a Bachelor's degree in Computer Science at Anhembi Morumbi University, with graduation planned for December 2025. Gaining comprehensive knowledge in software development, algorithms, data structures, and computer systems. Developing strong analytical and problem-solving skills through coursework and projects, preparing for a career in the technology industry."
     }
-    
   ]
 }

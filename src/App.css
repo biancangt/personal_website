@@ -342,44 +342,52 @@ h2 {
   align-items: flex-start;
   gap: 80px;
 }
+
 .portfolio--container-box {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 }
+
 .portfolio--container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 21.3px;
 }
+
 .portfolio--section--container {
-  display: flex;
-  align-items: stretch;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colunas iguais */
   gap: 42.6px;
   width: 100%;
 }
+
 .portfolio--section--img {
   border-radius: 8px;
   width: 100%;
 }
+
 .portfolio--section--img > img {
   width: 100%;
 }
+
 .portfolio--section--card {
+  position: relative; /* adicionado para posicionar o botão */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 32px;
-  flex: 1 0 0;
   background: #fff;
   box-shadow: 0 0 32px 0 rgba(0, 0, 0, 0.15);
   
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
+  /* flex: 1 0 0; */ /* removido porque o grid controla o tamanho */
+  padding: 0 0 50px 0; /* adiciona espaço embaixo para o botão fixo */
 }
+
 .portfolio--section--card--content {
   display: flex;
   padding: 32px;
@@ -388,23 +396,29 @@ h2 {
   gap: 32px;
   align-self: stretch;
 }
+
 .portfolio--section--title {
   color: var(--heading-color);
   margin-bottom: 1rem;
 }
+
 .portfolio--link {
+  position: absolute;  /* para fixar no bottom left */
+  bottom: 10.6px;      /* mantém espaçamento original */
+  left: 16px;
   text-decoration: none;
   display: flex;
   gap: 16px;
   border-bottom: 1.33px solid var(--primary);
-  padding-bottom: 10.6px;
+  padding-bottom: 10.6px; /* mantém o padding original */
   font-weight: 600;
   align-self: flex-start;
-  
 }
+
 .portfolio--section--card:hover path {
   stroke: #006b6a;
 }
+
 /* Portfolio Ends */
 
 /* Certification */
