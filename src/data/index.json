@@ -31,28 +31,32 @@
       "src": "./img/portfolio-image-1.png",
       "title": "Kitty House Adoption website",
       "description": "Kitty House is a full-stack web app for managing and showcasing cat adoption listings. Built with Flask (back end) and JavaScript (front end), it integrates external APIs to deliver real-time pet data and location-based services. The app features a responsive, user-friendly design for both adopters and administrators. This project strengthened my skills in Python web frameworks, RESTful APIs, and client-server communication, while reinforcing a user-centered development approach.",
-      "link": "https://github.com/biancangt/kitty_house"
+      "link": "https://github.com/biancangt/kitty_house",
+      "live": "https://kitty-house.onrender.com/"
     },
     {
       "id": "2",
       "src": "./img/portfolio-image-2.png",
       "title": "Personal Website",
       "description": "This is my Personal Website — a React-based web application I created to showcase my journey as a developer and highlight the projects I’ve worked on. Built using React, JavaScript, and CSS, the site features a clean, responsive design with smooth navigation and a user-friendly layout. It presents my skills, experiences, and passions in a structured and accessible way, while also serving as a central hub for networking and professional outreach. This project allowed me to strengthen my front-end development skills and work with modern component-based architecture",
-      "link": "https://github.com/biancangt/personal_website"
+      "link": "https://github.com/biancangt/personal_website",
+      "live": "https://biancangt.netlify.app/"
     },
     {
       "id": "3",
       "src": "./img/portfolio-image-3.png",
       "title": "Car Inventory",
       "description": "Car Inventory is a full-stack web application developed using React for the front end and PostgreSQL for database management. It allows users to add, update, and delete cars from an inventory through an intuitive and responsive interface. This project demonstrates dynamic data handling, state management, and seamless integration between the front end and a relational database, enabling efficient tracking and management of vehicle data.",
-      "link": "https://github.com/biancangt/car-inventory-react"
+      "link": "https://github.com/biancangt/car-inventory-react",
+      "live": "https://car-inventory-react0.netlify.app/"
     },
     {
       "id": "4",
       "src": "./img/portfolio-image-4.png",
       "title": "Blake's Cleaning Website",
       "description": "Blake's Cleaning is a website for a cleaning service company, built using React, JSON, JSX, JavaScript, and CSS. It features a clean and modern design, showcasing services offered and contact information for potential customers.",
-      "link": "https://github.com/biancangt/blakes-cleaning"
+      "link": "https://github.com/biancangt/blakes-cleaning",
+      "live": "https://blakescleaning.com/"
     },
     {
       "id": "5",

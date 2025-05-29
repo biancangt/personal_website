@@ -16,11 +16,9 @@ function ReadMore({ text }) {
   }, []);
 
   if (!isMobile) {
-    // Desktop: mostrar texto completo sem botão
     return <p className="text-md">{text}</p>;
   }
 
-  // Mobile: mostrar botão Read More / Read Less
   return (
     <div>
       {!isExpanded && (
@@ -33,7 +31,6 @@ function ReadMore({ text }) {
             cursor: "pointer",
             padding: 0,
             fontSize: "inherit",
-            
           }}
           aria-expanded={isExpanded}
         >
@@ -51,7 +48,6 @@ function ReadMore({ text }) {
             cursor: "pointer",
             padding: 0,
             fontSize: "inherit",
-            
           }}
           aria-expanded={isExpanded}
         >
@@ -108,30 +104,26 @@ export default function MyPortfolio() {
                 <h3 className="portfolio--section--title">{item.title}</h3>
                 <ReadMore text={item.description} />
               </div>
-              <a
-                href={item.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm portfolio--link"
-              >
-                View Project
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 20 19"
-                  fill="none"
-                  style={{ marginLeft: "8px", verticalAlign: "middle" }}
+              <div className="portfolio--section--links">
+                <a
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="portfolio--btn"
                 >
-                  <path
-                    d="M4.66667 1.66675H18V15.0001M18 1.66675L2 17.6667L18 1.66675Z"
-                    stroke="currentColor"
-                    strokeWidth="2.66667"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </a>
+                  View Code 
+                </a>
+                {item.live && (
+                  <a
+                    href={item.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="portfolio--btn"
+                  >
+                    View Live
+                  </a>
+                )}
+              </div>
             </div>
           </div>
         ))}

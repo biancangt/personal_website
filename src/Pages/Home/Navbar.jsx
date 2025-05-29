@@ -3,6 +3,7 @@ import { Link } from "react-scroll";
 
 function Navbar() {
   const [navActive, setNavActive] = useState(false);
+  const [showNavbar, setShowNavbar] = useState(true); // controla se navbar aparece no desktop
 
   const toggleNav = () => {
     setNavActive(!navActive);
@@ -20,10 +21,7 @@ function Navbar() {
     };
 
     window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   useEffect(() => {
@@ -31,6 +29,29 @@ function Navbar() {
       closeMenu();
     }
   }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Mostra o navbar apenas se o scroll estiver no topo da página
+      if (window.scrollY === 0) {
+        setShowNavbar(true);
+      } else {
+        setShowNavbar(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Chama a função uma vez para setar o estado inicial correto
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Se não quer mostrar o navbar, retorna null (não renderiza nada)
+  if (!showNavbar && window.innerWidth > 1200) {
+    return null;
+  }
 
   return (
     <nav className={`navbar ${navActive ? "active" : ""}`}>

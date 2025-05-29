@@ -359,7 +359,7 @@ h2 {
 
 .portfolio--section--container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 colunas iguais */
+  grid-template-columns: repeat(3, 1fr);
   gap: 42.6px;
   width: 100%;
 }
@@ -371,10 +371,11 @@ h2 {
 
 .portfolio--section--img > img {
   width: 100%;
+  border-radius: 8px;
 }
 
 .portfolio--section--card {
-  position: relative; /* adicionado para posicionar o botão */
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -384,17 +385,16 @@ h2 {
   
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
-  /* flex: 1 0 0; */ /* removido porque o grid controla o tamanho */
-  padding: 0 0 50px 0; /* adiciona espaço embaixo para o botão fixo */
+  padding: 32px 32px 80px 32px; /* espaço extra embaixo para os botões */
 }
 
 .portfolio--section--card--content {
   display: flex;
-  padding: 32px;
   flex-direction: column;
   align-items: flex-start;
   gap: 32px;
   align-self: stretch;
+  width: 100%;
 }
 
 .portfolio--section--title {
@@ -402,22 +402,68 @@ h2 {
   margin-bottom: 1rem;
 }
 
-.portfolio--link {
-  position: absolute;  /* para fixar no bottom left */
-  bottom: 10.6px;      /* mantém espaçamento original */
-  left: 16px;
-  text-decoration: none;
+/* Removido estilos do antigo portfolio--link */
+
+/* Container dos botões embaixo */
+.portfolio--section--links {
+  position: absolute;
+  bottom: 16px;
+  left: 32px;
+  right: 32px;
   display: flex;
   gap: 16px;
-  border-bottom: 1.33px solid var(--primary);
-  padding-bottom: 10.6px; /* mantém o padding original */
+}
+
+/* Botões estilos */
+.portfolio--btn {
+  flex: 1;
+  background-color: var(--primary, #006b6a);
+  color: #090101;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 0;
   font-weight: 600;
-  align-self: flex-start;
+  font-size: 1rem;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+.portfolio--btn:hover {
+  background-color: #7c61ff;
+}
+
+/* Botão do GitHub mantém seu estilo e posição original */
+.btn-github {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  font-weight: 600;
+  font-size: 1rem;
+  background-color: #24292e;
+  color: white;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-github:hover {
+  background-color: #444c56;
+}
+
+.btn-github svg {
+  fill: currentColor;
 }
 
 .portfolio--section--card:hover path {
   stroke: #006b6a;
 }
+/* My Portfolio Ends */
+
 
 /* Portfolio Ends */
 
