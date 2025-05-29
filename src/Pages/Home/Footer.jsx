@@ -12,7 +12,12 @@ export default function Footer() {
         fontSize: "0.9rem",
       }}
     >
-      <p>© 2025 Bianca Nagata</p>
+      <p>
+                &copy; 2025 . Website developed by{' '}
+                <a href="https://biancangt.netlify.app/" target="_blank" rel="noopener noreferrer" style={{ color: "#eee", textDecoration: "underline" }}>
+                  BNgt
+                </a>
+              </p>
       <a
         href="https://github.com/biancangt/personal_website"
         target="_blank"
